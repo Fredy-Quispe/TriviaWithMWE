@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #0c192c;
+}
+
+.container {
+  position: relative;
+  widows: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: animate 10s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 70px;
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  height: 250px;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  place-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  outline: none;
+  width: 350px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  margin: 10px 10px 10px 10px;
+}
+
+.result-box {
+  outline: none;
+  width: 350px;
+  height: 50px;
+  padding: 17px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  margin: 10px 10px 10px 10px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-show {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  background-color: #ff2d75;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 10px 10px 10px;
+}
+
+.btn-retu {
+  display: none;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  background-color: #4fc3dc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 10px 10px 10px;
+}
